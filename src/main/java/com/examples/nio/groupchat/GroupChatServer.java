@@ -1,11 +1,10 @@
-package com.examples.netty.groupchat;
+package com.examples.nio.groupchat;
 
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
-import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Set;
 

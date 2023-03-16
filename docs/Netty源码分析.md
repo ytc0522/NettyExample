@@ -85,6 +85,12 @@ linux2.1版本，提供了sendfile函数，数据不用经过用户态，直接�
 应用场景：Nginx、Netty
 
 **NettyIO模型**
+- 首先有两组线程池，BossGroup负责接收客户端连接，WorkerGroup负责网络读写操作。
+- NioEventLoop 表示一个不断执行任务的线程，都有一个selector，用于监听channel。
+- NioEventLoop 负责消息的读取，解码，处理，编码，发送。
+- NioEventLoopGroup 包含多个NioEventLoop。
+- 一个NioEventLoop包含一个selector和taskQueue。
+
 
 
 
